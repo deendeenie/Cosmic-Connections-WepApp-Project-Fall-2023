@@ -8,14 +8,15 @@ import MainPage from './pages/MainPage.jsx';
 {/* ° ✧ ~ ✩ Journal-shaped content holder ✩ ~ ✧ ° */}
 
 function App() {
-<>
+    return (
+    <>
     {/* Top Header */}
     <Header/>
 
     {/* Element that contains all app functionalities */}
     <MainPage/>
-</>
-}
+    </>
+)}
 
 export default App
 
