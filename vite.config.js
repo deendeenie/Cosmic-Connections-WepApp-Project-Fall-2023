@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc"; // this on might be "import react from "@vitejs/plugin-react";" in your solution
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     };
 
     if (command !== "serve") {
-        config.base = "/cosmic-connections-wepApp-project-fall-2023";
+        config.base = "/cosmic-connections-wepapp-project-fall-2023/";
     }
 
     return config;
