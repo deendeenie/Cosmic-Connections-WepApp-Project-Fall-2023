@@ -1,0 +1,34 @@
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Section container */
+.header-logo-section{
+  position: relative;
+  display: block;
+  float: left;
+  height: auto;
+  width: 90vw;
+}
+
+/* Logo */
+.header-logo{
+  display: inline-block;
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* App name next to logo */
+.header-app-name{
+  display: inline-block;
+  color: var(--off-white);
+  font-family: 'QuickSand Bold';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 15px auto;
+  text-align: left;
+  }
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */

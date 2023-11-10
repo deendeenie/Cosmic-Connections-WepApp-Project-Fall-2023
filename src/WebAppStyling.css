@@ -1,0 +1,201 @@
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Loading fonts */
+@font-face{font-family: 'Frenchpress';
+  src: url(assets/fonts/frenchpress-heading.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;}
+@font-face{font-family: 'QuickSand';
+  src: url(assets/fonts/quicksand-regular-bodytext.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;}
+@font-face{font-family: 'QuickSand Light';
+  src: url(assets/fonts/quicksand-light-bodytext.ttf) format('truetype');
+  font-weight: lighter;
+  font-style: normal;}
+@font-face{font-family: 'QuickSand Bold';
+  src: url(assets/fonts/quicksand-bold-subheading.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Basics and defaults */
+:root{
+  /* Colors - Basics */
+  --off-black: #2D033B;
+  --off-white: #F5EDF7;
+
+  --light-blue: #6DC2FF;
+  --strong-blue: #544CD0;
+  --darker-blue: #400B96;
+  --galactic-purple: #5A0AAA;
+  --night-indigo: #381B67;
+
+  --page-beige: #F9E9E0;
+  --page-shadow: #AE9DAD;
+
+  /* Colors: Journal*/
+  --journal-cover-sides: #3a1f5c;
+  --journal-cover-middle: #1e1e1e;
+  --journal-core: #15061A;
+
+  /* Colors: Transparency */
+  --translucent-white: #def1ffcb;
+  --translucent-dark: #2d033bbd;
+  --transparent: rgba(0, 0, 0, 0);
+  
+  /* Typography default */
+  font-family: 'QuickSand', Roboto, sans-serif;
+  color: var(--off-black);
+  font-size: 0.8rem;
+}
+/* Selection color */ ::selection {color: var(--off-white); background: var(--galactic-purple);}
+
+
+/* Website body */
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+
+  background-image: url('assets/background/cosmic_connections_background.png');
+  background-size: cover;
+  background-repeat: initial;
+  background-position: center;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Centered Heading - Big */
+h2{
+  font-family: 'Frenchpress';
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.18rem;
+  text-align: center;
+}
+
+/* Centered Heading - Small */
+h3{
+  font-family: 'Frenchpress';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12rem;
+  text-align: center;
+}
+
+/* Subheading */
+h4{
+  font-family: 'QuickSand Bold';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Paragraph */
+p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-family: 'Quicksand';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+.top-header{
+  display: flex;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 70px;
+  width: 100%;
+  max-width: 100vw;
+  padding: 5px 15px;
+  margin: 0;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Journal decor */
+.journal-cover{
+  display: block;
+
+  position: absolute;
+  bottom: 7%;
+  right: 12.7%;
+  z-index: 2;
+
+  height: 60%;
+  width: 44%;
+  padding: 5% 10%;
+  margin: 0;
+
+  background: linear-gradient(90deg, var(--journal-cover-sides) 0%, var(--journal-cover-middle) 50%, var(--journal-cover-sides) 100%); 
+}
+
+.journal-core{
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 47.5%;
+  z-index: 3;
+
+  height: 100%;
+  width: 5%;
+  margin: 0 auto;
+
+  background-color: var(--journal-core);
+}
+
+.page-left{
+  display: inline-block;
+
+  position: absolute;
+  bottom: 9%;
+  left: 25%;
+  z-index: 5;
+
+  height: 69%;
+  width: 26%;
+  padding: 2%;
+  margin: 0;
+
+  background: var(--page-beige);
+}
+
+.page-right{
+  display: inline-block;
+
+  position: absolute;
+  bottom: 9%;
+  right: 14.5%;
+  z-index: 4;
+
+  height: 69%;
+  width: 26%;
+  padding: 2%;
+  margin: 0;
+
+  background: var(--page-beige);
+  border-left: 10px solid var(--page-shadow);
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */

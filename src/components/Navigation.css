@@ -1,0 +1,48 @@
+/* ° ✧ ~ ✩ Side navigation menu ✩ ~ ✧ ° */
+
+.navigation{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    height: 50%;
+    width: 10%;
+    z-index: 1;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Navigation button */
+.nav-label{
+    position: relative;
+    display: block;
+
+    height: auto;
+    width: 120%;
+    padding: 15% 50% 15% 15%;
+    margin: 15% auto;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--galactic-purple);
+
+    color: var(--off-white);
+    font-family: 'QuickSand';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+/* Icon of navigation */
+.nav-icon{
+    display: inline-block;
+    stroke: var(--off-white);
+    fill: var(--transparent);
+    stroke-width: 1.5;
+    height: 15px;
+    width: 20px;
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */

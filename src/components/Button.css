@@ -1,0 +1,111 @@
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Basics of a button */
+.btn{
+  display: block;
+
+  font-family: 'Quicksand';
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  height: 10%;
+  width: 40%;
+  padding: 3% 5% 6% 5%;
+  margin: 2% 10%;
+
+  border: 0;
+  border-radius: 5px;
+}
+
+/* Button icon */
+.btn-icon{
+  display: inline-block;
+  fill: var(--transparent);
+  stroke-width: 1.5;
+  padding-right: 2%;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Primary button */
+.button-primary{
+  border: 0;
+  color: var(--off-white);
+  background-color: var(--galactic-purple);
+  background-color: linear-gradient(90deg, rgba(84,76,208,1) 0%, rgba(90,10,170,1) 100%);
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button-primary:hover{
+  border: 0;
+  color: var(--translucent-white);
+  background-color: var(--strong-blue);
+  background-color: linear-gradient(90deg, rgba(109,194,255,1) 0%, rgba(64,11,150,1) 100%); 
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Icon */
+.button-primary .icon{
+  stroke: var(--off-white);
+  transition: stroke 0.5s;
+}
+
+.button-primary:hover .icon{
+  stroke: var(--translucent-white);
+  transition: stroke 0.5s;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Secondary button */
+
+.button-secondary{
+  border: 1.5px solid var(--off-black);
+  color: var(--off-black);
+  background-color: var(--transparent);
+
+  transition: border 0.5s, color 0.5s;
+}
+
+.button-secondary:hover{
+  border: 1.5px solid var(--galactic-purple);
+  color: var(--galactic-purple);
+
+  transition: border 0.5s, color 0.5s;
+}
+
+/* Icon */
+.button-secondary .icon{
+  stroke: var(--off-black);
+  transition: stroke 0.5s;
+}
+
+.button-secondary:hover .icon{
+  stroke: var(--galactic-purple);
+  transition: stroke 0.5s;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Inactive button */
+
+.btn .button-inactive{
+  border: 1.5px solid var(--page-shadow);
+  color: var(--page-shadow);
+  background-color: var(--transparent);
+  pointer-events: none;
+}
+
+/* Icon */
+.button-inactive .icon{
+  stroke: var(--page-shadow);
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
