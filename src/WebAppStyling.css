@@ -52,6 +52,7 @@
 }
 /* Selection color */ ::selection {color: var(--off-white); background: var(--galactic-purple);}
 
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
 
 /* Website body */
 body{
@@ -60,7 +61,7 @@ body{
   margin: 0;
   padding: 0; 
 
-  background-image: url('assets/background/cosmic_connections_background.png');
+  background-image: url('src/assets/background/cosmic_connections_background.png');
   background-size: cover;
   background-repeat: initial;
   background-position: center;
