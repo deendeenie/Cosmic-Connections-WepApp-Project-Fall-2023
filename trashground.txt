@@ -10,6 +10,18 @@
         </>
     );*/}
 
+--------------------------------------
+
         {/*return <main>{ publicRoutes }</main>;*/}
 
          {/*basename={import.meta.env.DEV ? "/" : "/cosmic-connections-wepApp-project-fall-2023/"}*/}
+
+--------------------------------------
+
+const navigate = useNavigate();
+
+function handleClick() {
+        navigate(`/posts/${dreamentry.id}`);
+}
+
+import { useNavigate } from "react-router-dom";

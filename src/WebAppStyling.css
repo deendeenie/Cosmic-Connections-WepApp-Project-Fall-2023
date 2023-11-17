@@ -42,7 +42,7 @@
 
   /* Colors: Transparency */
   --translucent-white: #def1ffcb;
-  --translucent-dark: #2d033bbd;
+  --translucent-dark: #2d033b96;
   --transparent: rgba(0, 0, 0, 0);
   
   /* Typography default */
@@ -200,3 +200,60 @@ p{
 }
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+.entry-preview{
+  height: 10%;
+  margin: 2% 0;
+}
+
+.entry-preview-info{
+  display: block;
+}
+
+.entry-preview-icon{
+  display: inline-block;
+  height: 10px;
+  width: auto;
+  fill: var(--transparent);
+  stroke: var(--translucent-dark);
+  stroke-width: 0.07rem;
+  margin-bottom: -0.5%;
+  margin-right: 5%;
+}
+
+.entry-preview hr{
+  margin-top: -2%;
+  border-top: 1px solid var(--translucent-dark);
+}
+
+.entry-preview h4{
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  height: 10%;
+  width: 70%;
+
+  font-family: 'QuickSand Bold';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.entry-preview p{
+  display: block;
+
+  height: 10%;
+  width: 30%;
+  float: right;
+  align-content: center;
+
+  font-family: 'Quicksand';
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  color: var(--translucent-dark);
+}
