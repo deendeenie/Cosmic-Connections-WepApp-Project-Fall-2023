@@ -10,10 +10,11 @@
 ------
 
 ### ⌨️ Code languages used:
-+ React
-+ JavaScript XML
-+ HTML
-+ CSS
++ React ⚛️
++ Firebase 🔥
++ JavaScript XML 📁
++ CSS 🎨
++ HTML 📋
 
 ------
 
