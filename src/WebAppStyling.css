@@ -208,21 +208,25 @@ p{
 
 .entry-preview-info{
   display: block;
+  margin: auto;
 }
 
 .entry-preview-icon{
   display: inline-block;
+
   height: 10px;
   width: auto;
+  margin-bottom: -0.5%;
+  margin-right: 5%;
+
   fill: var(--transparent);
   stroke: var(--translucent-dark);
   stroke-width: 0.07rem;
-  margin-bottom: -0.5%;
-  margin-right: 5%;
 }
 
 .entry-preview hr{
-  margin-top: -2%;
+  margin-top: 3%;
+  width: 100%;
   border-top: 1px solid var(--translucent-dark);
 }
 
@@ -231,8 +235,9 @@ p{
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  height: 10%;
+  height: auto;
   width: 70%;
+  margin: auto;
 
   font-family: 'QuickSand Bold';
   font-size: 1rem;
@@ -243,11 +248,11 @@ p{
 
 .entry-preview p{
   display: block;
-
-  height: 10%;
-  width: 30%;
   float: right;
   align-content: center;
+
+  height: auto;
+  width: 30%;
 
   font-family: 'Quicksand';
   font-size: 0.8rem;

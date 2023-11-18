@@ -4,6 +4,7 @@
 
 import Header from './components/Header.jsx'
 import MainPage from './pages/MainPage.jsx';
+import Navigation from './components/Navigation.jsx';
 
 {/* ° ✧ ~ ✩ Journal-shaped content holder ✩ ~ ✧ ° */}
 
@@ -15,6 +16,8 @@ function App() {
 
     {/* Element that contains all app functionalities */}
     <MainPage/>
+
+    <Navigation/>
     </>
 )}
 
