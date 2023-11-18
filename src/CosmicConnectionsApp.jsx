@@ -1,6 +1,6 @@
 {/* Imports */}
 {/* CSS styling */} import './WebAppStyling.css'
-{/* Firebase  import "./firebase-config";*/}
+{/* Firebase */} import "./firebaseconfig";
 
 import Header from './components/Header.jsx'
 import MainPage from './pages/MainPage.jsx';
@@ -8,7 +8,7 @@ import Navigation from './components/Navigation.jsx';
 
 {/* ° ✧ ~ ✩ Journal-shaped content holder ✩ ~ ✧ ° */}
 
-function App() {
+export default function App() {
     return (
     <>
     {/* Top Header */}
@@ -20,7 +20,5 @@ function App() {
     <Navigation/>
     </>
 )}
-
-export default App
 
 {/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */}

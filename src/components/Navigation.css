@@ -31,6 +31,8 @@
     line-height: normal;
     text-transform: capitalize;
     text-align: left;
+
+    cursor: pointer;
 }
 
 /* Icon of navigation */
@@ -43,6 +45,16 @@
     width: 20px;
     margin-right: 5px;
     margin-bottom: -2px;
+}
+
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+.nav-label:hover{
+    color: var(--translucent-white);
+    background: linear-gradient(0.25turn, var(--strong-blue), var(--galactic-purple));
+}
+.nav-label:hover .nav-icon{
+    stroke: var(--translucent-white);
 }
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */

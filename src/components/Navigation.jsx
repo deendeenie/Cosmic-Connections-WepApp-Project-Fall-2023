@@ -1,10 +1,11 @@
-{/* Import CSS file and Navigation linking */}
+// Import CSS file and Navigation linking
 import "./Navigation.css"
 import { NavLink } from "react-router-dom";
+import NotificationTrigger from "../NotificationTrigger";
 
 {/*° ✧ ~ ✩ Navigation component ✩ ~ ✧ °*/}
 
-export default function Navigation() {
+function Navigation() {
     return (
       <nav className="navigation">
 
@@ -27,13 +28,12 @@ export default function Navigation() {
         </NavLink>
 
         {/* Test button to show off notification functionality */}
-        <NavLink to="/writelife" className="nav-label">
-          <svg className="nav-icon" viewBox="0 0 14 15"><path d="M3.11689 10.2249H0.78125V0.882324H13.238V2.43942M3.11689 12.1713V14.1176L7.00962 10.2249H13.238V5.5536"  strokeLinecap="round" strokeLinejoin="round"/></svg>
-          Trigger a notification
-        </NavLink>
+        <NotificationTrigger/>
 
       </nav>
     );
-  }  
+  }
+
+export default Navigation
 
 {/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */}

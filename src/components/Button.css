@@ -36,19 +36,17 @@
 .button-primary{
   border: 0;
   color: var(--off-white);
-  background-color: var(--galactic-purple);
-  background-color: linear-gradient(90deg, rgba(84,76,208,1) 0%, rgba(90,10,170,1) 100%);
+  background: linear-gradient(0.25turn, var(--strong-blue), var(--galactic-purple));
 
-  transition: background-color 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
 }
 
 .button-primary:hover{
   border: 0;
   color: var(--translucent-white);
-  background-color: var(--strong-blue);
-  background-color: linear-gradient(90deg, rgba(109,194,255,1) 0%, rgba(64,11,150,1) 100%); 
+  background: linear-gradient(0.25turn, var(--light-blue), var(--darker-blue));
 
-  transition: background-color 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
 }
 
 /* Icon */

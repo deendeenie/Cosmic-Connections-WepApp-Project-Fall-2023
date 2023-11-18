@@ -1,15 +1,3 @@
-    {/* const publicRoutes = (
-        <>
-        <Navigation />
-            <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/writedream" element={<WriteDreamEntry />} />
-                    <Route path="/writelife" element={<WriteLifeEntry />} />
-                    <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-        </>
-    );*/}
-
 --------------------------------------
 
         {/*return <main>{ publicRoutes }</main>;*/}
