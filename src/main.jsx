@@ -6,8 +6,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-        <BrowserRouter basename={import.meta.env.DEV ? "/" : "/cosmic-connections-wepApp-project-fall-2023/"}>
-            <App />
+        <BrowserRouter basename={"/"}>
+            <App/>
         </BrowserRouter>
   </React.StrictMode>,
 )
