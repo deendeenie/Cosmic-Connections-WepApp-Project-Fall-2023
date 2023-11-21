@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     };
 
     if (command !== "serve") {
-        config.base = "/cosmic-connections-wepapp-project-fall-2023/";
+        config.base = "/Cosmic-Connections-WepApp-Project-Fall-2023/";
     }
 
     return config;
