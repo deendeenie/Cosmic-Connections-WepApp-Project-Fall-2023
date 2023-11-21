@@ -27,9 +27,9 @@ const TextEditor = () => {
           theme="snow"
           modules={modules}
           formats={formats}
-          placeholder="write your content ...."
+          placeholder="Start writing.."
           onChange={handleProcedureContentChange}
-          style={{ height: "220px" }}
+          style={{ marginTop: "-20px", height: "430px", width: "410px" }}
         >
         </ReactQuill>
       </div>

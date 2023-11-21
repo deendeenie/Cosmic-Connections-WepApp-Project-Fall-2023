@@ -4,6 +4,7 @@
 
 import Header from './components/Header.jsx'
 import MainPage from './pages/MainPage.jsx';
+import CreateDreamEntry from './pages/CreateDreamEntry.jsx';
 import Navigation from './components/Navigation.jsx';
 
 {/* ° ✧ ~ ✩ Journal-shaped content holder ✩ ~ ✧ ° */}
@@ -15,7 +16,7 @@ export default function App() {
     <Header/>
 
     {/* Element that contains all app functionalities */}
-    <MainPage/>
+    <CreateDreamEntry/>
 
     <Navigation/>
     </>

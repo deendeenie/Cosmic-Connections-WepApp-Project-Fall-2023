@@ -1,15 +1,15 @@
 {/* Import Page components */}
 
-{/* Entry pages */}
-import EntryDreamPageLeft from '../sections/EntryDreamPageLeft.jsx'
-import EntryDreamPageRight from '../sections/EntryDreamPageRight.jsx'
+{/* Content pages */}
+import EntryDreamPageLeft from '../sections/EditDreamPageLeft.jsx'
+import EntryDreamPageRight from '../sections/EditDreamPageRight.jsx'
 
 {/* Construction */}
-import JournalCover from '../components/JournalCover'
+import JournalCover from '../components/JournalCover.jsx'
 
 {/* ~✩ Journal-shaped content holder ✩~ */}
 
-function WriteDreamEntry() {
+export default function ViewDreamEntry() {
 
   return (
     <>
@@ -26,7 +26,5 @@ function WriteDreamEntry() {
     </>
   )
 }
-
-export default WriteDreamEntry
 
 {/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */}

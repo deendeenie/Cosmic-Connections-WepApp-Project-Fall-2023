@@ -10,7 +10,7 @@ function PageHeading(heading) {
 
       <h1 className="heading-one">
         {/* Icon */}
-        <svg className="heading-one-icon" viewBox={heading.viewbox}><path d={heading.path} strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <svg className="heading-one-icon" viewBox={heading.viewBox}><path d={heading.path} strokeLinecap="round" strokeLinejoin="round"/></svg>
         
         {/* Heading text */}
         {heading.text}
