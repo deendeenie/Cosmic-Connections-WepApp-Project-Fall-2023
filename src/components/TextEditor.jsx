@@ -1,6 +1,7 @@
 import React from "react";
-import 'quill/dist/quill.snow.css'
 import ReactQuill from 'react-quill'
+import 'quill/dist/quill.snow.css'
+import './CreateUpdateEntry.css'
 
 const TextEditor = () => {
   
@@ -22,14 +23,13 @@ const TextEditor = () => {
 
   return (
     <div >
-      <div style={{ display: "grid", justifyContent: "center"}}>
+      <div className="entry-text-editor" style={{ display: "grid", justifyContent: "center"}}>
         <ReactQuill
           theme="snow"
           modules={modules}
           formats={formats}
           placeholder="Start writing.."
           onChange={handleProcedureContentChange}
-          style={{ marginTop: "-20px", height: "430px", width: "410px" }}
         >
         </ReactQuill>
       </div>

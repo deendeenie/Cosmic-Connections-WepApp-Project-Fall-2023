@@ -14,8 +14,8 @@
   text-align: center;
 
   height: 10%;
-  width: 40%;
-  padding: 3% 5% 6% 5%;
+  width: 30%;
+  padding: 3% 5%;
   margin: 2% 10%;
 
   border: 0;
@@ -25,9 +25,10 @@
 /* Button icon */
 .btn-icon{
   display: inline-block;
+  width: 15%;
   fill: var(--transparent);
   stroke-width: 1.5;
-  padding-right: 2%;
+  padding-right: 10%;
 }
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
@@ -50,12 +51,12 @@
 }
 
 /* Icon */
-.button-primary .icon{
+.button-primary .btn-icon{
   stroke: var(--off-white);
   transition: stroke 0.5s;
 }
 
-.button-primary:hover .icon{
+.button-primary:hover .btn-icon{
   stroke: var(--translucent-white);
   transition: stroke 0.5s;
 }
@@ -80,12 +81,12 @@
 }
 
 /* Icon */
-.button-secondary .icon{
+.button-secondary .btn-icon{
   stroke: var(--off-black);
   transition: stroke 0.5s;
 }
 
-.button-secondary:hover .icon{
+.button-secondary:hover .btn-icon{
   stroke: var(--galactic-purple);
   transition: stroke 0.5s;
 }
@@ -102,8 +103,13 @@
 }
 
 /* Icon */
-.button-inactive .icon{
+.button-inactive .btn-icon{
   stroke: var(--page-shadow);
 }
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+
+/* Remove default focus/hover black outline*/
+*,*:focus,*:hover{
+  outline:none;
+}

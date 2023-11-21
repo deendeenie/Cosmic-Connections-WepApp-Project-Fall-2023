@@ -34,36 +34,36 @@ export default function CreateDream({ saveEntry, entry }) {
             saveEntry(formData);
         } else {
             // if not, set errorMessage state.
-            setErrorMessage("You have to name your entry");
+            setErrorMessage("You have to name your entry!");
         }
     }
 
     return (
-      <section className="page-left">
         <form onSubmit={handleSubmit}>
-            <label>
-                Title
+            <div className='container-entry-title'>
+                <label className="entry-title">
+                    Title:
+                </label>
                 <input
-                    type="text"
-                    value={title}
-                    placeholder="Name your entry"
-                    onChange={event => setTitle(event.target.value)}
-                />
-            </label>
-            <label>
-                Entry
-                <input
+                        type="text"
+                        value={title}
+                        placeholder="Name your entry"
+                        onChange={event => setTitle(event.target.value)}
+                        className="entry-title-input"
+                    />
+            </div>
+
+            <input
                     type="text"
                     value={dreamentry}
-                    placeholder="Name your entry"
+                    placeholder="Start writing"
                     onChange={event => setDreamEntry(event.target.value)}
-                />
-            </label>
+            />
+
             <p className="text-error">{errorMessage}</p>
 
-            <ButtonPrimary label="Save"/>
+            <ButtonPrimary label="Save" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
         </form>
-        </section>
     );
 }
 

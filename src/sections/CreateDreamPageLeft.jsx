@@ -25,7 +25,7 @@ export default function CreateDreamPageLeft() {
         }
     
         return (
-            <section className="">
+            <section className="page-left">
                 <CreateDream savePost={createPost} />
             </section>
         );
