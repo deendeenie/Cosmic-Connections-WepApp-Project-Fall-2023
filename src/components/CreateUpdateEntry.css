@@ -13,7 +13,6 @@
 }
 .ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
     color: var(--galactic-purple);
-    fill: var(--galactic-purple);
 }
 
 .ql-editor {
@@ -34,6 +33,12 @@
     word-wrap: break-word;
 
     color: var(--off-black)
+}
+
+.ql-editor::placeholder {
+    font-family: 'Quicksand Light';
+    color: var(--translucent-dark);
+    font-style: normal;
 }
 
 .ql-blank{
