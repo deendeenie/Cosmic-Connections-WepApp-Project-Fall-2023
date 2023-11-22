@@ -1,13 +1,3 @@
---------------------------------------
-
-        {/*return <main>{ publicRoutes }</main>;*/}
-
---------------------------------------
-
-const navigate = useNavigate();
-
 function handleClick() {
         navigate(`/posts/${dreamentry.id}`);
 }
-
-import { useNavigate } from "react-router-dom";

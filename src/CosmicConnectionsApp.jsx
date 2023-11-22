@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 {/* ° ✧ ~ ✩ Journal-shaped content holder ✩ ~ ✧ ° */}
 
 export default function App() {
-    const publicRoutes = (
+    const directPage = (
         <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/writedream" element={<CreateDreamEntry />} />
@@ -26,7 +26,7 @@ export default function App() {
     <Header/>
 
     {/* Element that contains all app functionalities */}
-    <main>{publicRoutes}</main>
+    <main>{directPage}</main>
 
     <Navigation/>
     </>

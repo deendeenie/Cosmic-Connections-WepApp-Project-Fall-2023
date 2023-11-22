@@ -1,7 +1,7 @@
 function DreamEntryPreview(dreamentry) {
     return (
-        <article class="entry-preview">
-            <div class="entry-preview-info">
+        <article className="entry-preview">
+            <div className="entry-preview-info">
                 <h4>{dreamentry.title}</h4>
                 <p>
                     <svg className="entry-preview-icon" viewBox="0 0 13 15">

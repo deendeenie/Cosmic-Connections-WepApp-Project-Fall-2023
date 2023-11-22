@@ -20,8 +20,15 @@ export default function CreateDream({ saveEntry, entry }) {
         }
     }, [entry]); // useEffect is called every time entry changes.
 
-    function handleSubmit(event) {
+    async function handleSubmit(event){
         event.preventDefault();
+
+        const url = "https://webapp-project-2023-default-rtdb.firebaseio.com/journalentries.json/dream-entries.json";
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(newPost)
+        });
+
         const formData = {
             // create a new objebt to store the value from states / input fields
             title: title,
