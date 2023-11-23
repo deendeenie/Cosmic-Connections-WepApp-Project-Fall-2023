@@ -1,6 +1,7 @@
 {/* Import Page components */}
 import ButtonPrimary from '../components/ButtonPrimary.jsx'
 import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 {/* ~✩ "Left page" content container ✩~ */}
@@ -10,6 +11,7 @@ export default function CreateDream({ saveEntry, entry }) {
     const [title, setTitle] = useState("");
     const [nightstamp, setNight] = useState("");
     const [dreamentry, setDreamEntry] = useState("");
+    const [confirmMessage, setConfirmMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
@@ -23,25 +25,35 @@ export default function CreateDream({ saveEntry, entry }) {
     async function handleSubmit(event){
         event.preventDefault();
 
+        const newEntry = collection
+
         const url = "https://webapp-project-2023-default-rtdb.firebaseio.com/journalentries.json/dream-entries.json";
         const response = await fetch(url, {
             method: "POST",
-            body: JSON.stringify(newPost)
+            body: JSON.stringify(newEntry)
         });
 
         const formData = {
             // create a new objebt to store the value from states / input fields
             title: title,
             dreamentry: dreamentry,
+            nightstamp: nightstamp,
         };
 
         const validForm = formData.title// will return false if one of the properties doesn't have a value
+
         if (validForm) {
-            // if all fields/ properties are filled, then call saveentry
             saveEntry(formData);
         } else {
-            // if not, set errorMessage state.
             setErrorMessage("You have to name your entry!");
+        }
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("New post created: ", data);
+            navigate("/");
+        } else {
+            console.log("Sorry, something went wrong");
         }
     }
 
@@ -55,7 +67,7 @@ export default function CreateDream({ saveEntry, entry }) {
                         type="text"
                         value={title}
                         placeholder="Name your entry"
-                        onChange={event => setTitle(event.target.value)}
+                        onChange={event => setTitle(event.target.newEntry)}
                         className="entry-title-input"
                     />
             </div>
@@ -64,7 +76,7 @@ export default function CreateDream({ saveEntry, entry }) {
                     type="text"
                     value={dreamentry}
                     placeholder="Start writing"
-                    onChange={event => setDreamEntry(event.target.value)}
+                    onChange={event => setDreamEntry(event.target.newEntry)}
             />
 
             <p className="text-error">{errorMessage}</p>

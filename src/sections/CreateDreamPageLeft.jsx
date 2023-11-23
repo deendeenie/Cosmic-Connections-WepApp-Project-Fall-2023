@@ -8,12 +8,12 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function CreateDreamPageLeft() {
         const navigate = useNavigate();
     
-        async function createPost(newPost) {
+        async function createPost() {
     
             const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/journalentries.json`;
             const response = await fetch(url, {
                 method: "POST",
-                body: JSON.stringify(newPost)
+                body: JSON.stringify()
             });
             if (response.ok) {
                 const data = await response.json();
