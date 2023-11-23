@@ -261,6 +261,7 @@ p {
     width: 70%;
     margin: auto;
 
+    color: var(--off-black);
     font-family: "QuickSand Bold";
     font-size: 1rem;
     font-style: normal;
@@ -287,6 +288,11 @@ p {
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
 
+.submit-entry-container{
+    position: absolute;
+    top: 30%;
+}
+
 .text-error{
     font-family: 'Quicksand Bold';
     color: var(--strong-blue);
@@ -309,6 +315,26 @@ input{
     width: 80%;
     background-color: var(--transparent);
 }
+
+.entry-date{
+    width: 30%;
+}
+
+.entry-note-input{
+    font-family: 'Quicksand Bold';
+    color: var(--off-black);
+    padding-right: 2%;
+
+    display: block;
+    height: 30%;
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+
+    background-color: var(--transparent);
+    border: 0;
+}
+
 
 input::placeholder{
     font-family: 'Quicksand Light';

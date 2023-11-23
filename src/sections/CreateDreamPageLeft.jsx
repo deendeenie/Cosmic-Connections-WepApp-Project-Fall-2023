@@ -1,5 +1,6 @@
 {/* Import Page components */}
 import CreateDream from '../components/CreateEntry.jsx';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 
 {/* ~✩ "Left page" content container ✩~ */}

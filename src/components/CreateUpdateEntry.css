@@ -1,9 +1,11 @@
 .entry-text-editor{
-    display: block;
     position: absolute;
-    top: 2%;
-    height: 60%;
+    top: -70%;
+    right: -132%;
+    display: block;
+    height: auto;
     width: 87%;
+    margin: 5% auto;
 }
 
 .ql-toolbar.ql-snow{
@@ -19,7 +21,7 @@
     box-sizing: border-box;
 
     height: 350px;
-    width: 370px;
+    width: 360px;
     padding: 5% 10%;
 
     outline: none;

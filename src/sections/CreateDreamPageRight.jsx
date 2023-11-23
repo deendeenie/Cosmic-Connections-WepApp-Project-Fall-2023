@@ -8,7 +8,6 @@ function CreateDreamPageRight() {
 
   return (
     <section className="page-right">
-      <TextEditor />
     </section>
   )
 }
