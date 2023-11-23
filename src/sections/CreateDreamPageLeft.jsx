@@ -1,5 +1,4 @@
 {/* Import Page components */}
-import ButtonPrimary from '../components/ButtonPrimary.jsx'
 import CreateDream from '../components/CreateEntry.jsx';
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -8,16 +7,16 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function CreateDreamPageLeft() {
         const navigate = useNavigate();
     
-        async function createPost() {
+        async function createEntry() {
     
-            const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/journalentries.json`;
+            const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/dream-entries.json`;
             const response = await fetch(url, {
                 method: "POST",
-                body: JSON.stringify()
+                body: JSON.stringify(dreamEntry)
             });
             if (response.ok) {
                 const data = await response.json();
-                console.log("New post created: ", data);
+                console.log("New entry has been added to the journal: ");
                 navigate("/");
             } else {
                 console.log("Sorry, something went wrong");
@@ -26,7 +25,7 @@ export default function CreateDreamPageLeft() {
     
         return (
             <section className="page-left">
-                <CreateDream savePost={createPost} />
+                <CreateDream saveEntry={createEntry} />
             </section>
         );
     }

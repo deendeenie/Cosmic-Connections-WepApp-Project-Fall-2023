@@ -3,9 +3,6 @@ import ButtonPrimary from '../components/ButtonPrimary.jsx'
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { uid } from 'uid';
-
-
 {/* ~✩ "Left page" content container ✩~ */}
 
 export default function CreateDream({ saveDreamEntry, newDreamEntry }) {
