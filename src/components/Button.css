@@ -2,7 +2,7 @@
 
 /* Basics of a button */
 .btn{
-  display: block;
+  display: inline-block;
 
   font-family: 'Quicksand';
   font-size: 0.75rem;
@@ -15,8 +15,8 @@
 
   height: 10%;
   width: 30%;
-  padding: 3% 5%;
-  margin: 5% 0;
+  padding: 3% 0;
+  margin: 5% 2%;
 
   border: 0;
   border-radius: 5px;
@@ -38,16 +38,12 @@
   border: 0;
   color: var(--off-white);
   background: linear-gradient(0.25turn, var(--strong-blue), var(--galactic-purple));
-
-  transition: background 0.5s, color 0.5s;
 }
 
 .button-primary:hover{
   border: 0;
   color: var(--translucent-white);
   background: linear-gradient(0.25turn, var(--light-blue), var(--darker-blue));
-
-  transition: background 0.5s, color 0.5s;
 }
 
 /* Icon */
@@ -69,26 +65,20 @@
   border: 1.5px solid var(--off-black);
   color: var(--off-black);
   background-color: var(--transparent);
-
-  transition: border 0.5s, color 0.5s;
 }
 
 .button-secondary:hover{
   border: 1.5px solid var(--galactic-purple);
   color: var(--galactic-purple);
-
-  transition: border 0.5s, color 0.5s;
 }
 
 /* Icon */
 .button-secondary .btn-icon{
   stroke: var(--off-black);
-  transition: stroke 0.5s;
 }
 
 .button-secondary:hover .btn-icon{
   stroke: var(--galactic-purple);
-  transition: stroke 0.5s;
 }
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
@@ -111,5 +101,5 @@
 
 /* Remove default focus/hover black outline*/
 *,*:focus,*:hover{
-  outline:none;
+  outline: none;
 }

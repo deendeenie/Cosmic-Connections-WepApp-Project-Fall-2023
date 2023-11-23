@@ -2,7 +2,7 @@ import './Button.css'
 
 function ButtonPrimary(buttonprimary) {
   return (
-    <button className="btn button-primary" type="submit">
+    <button className="btn button-primary" type={buttonprimary.type}>
       
       {/* Icon */}
       <svg className="btn-icon" viewBox={buttonprimary.viewBox}><path d={buttonprimary.path} strokeLinecap="round" strokeLinejoin="round"/></svg>

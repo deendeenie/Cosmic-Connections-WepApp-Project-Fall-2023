@@ -1,58 +1,97 @@
-.entry-text-editor{
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
+/* General */
+.submit-entry-container{
     position: absolute;
-    top: -70%;
-    right: -132%;
-    display: block;
-    height: auto;
-    width: 87%;
-    margin: 5% auto;
+    top: 30%;
 }
 
-.ql-toolbar.ql-snow{
-    border: 0;
+.text-error{
+    font-family: 'Quicksand Bold';
+    color: var(--strong-blue);
+    margin: 2% auto;
+}
+
+input::placeholder{
+    font-family: 'Quicksand Light';
+    color: var(--translucent-dark);
+}
+
+input:focus{
     color: var(--off-black);
-    font-family: 'QuickSand';
-}
-.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
-    color: var(--galactic-purple);
+    border-bottom: 1px solid var(--off-black);
 }
 
-.ql-editor {
-    box-sizing: border-box;
+/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
 
-    height: 350px;
-    width: 360px;
-    padding: 5% 10%;
+.container-entry-info{
+    margin: 2% auto;
+}
 
-    outline: none;
-    overflow-y: auto;
+.entry-input-label{
+    font-family: 'Quicksand Bold';
+    color: var(--off-black);
+    padding-right: 2%;
+}
 
-    line-height: 1.0;
-    tab-size: 4;
-    -moz-tab-size: 4;
-    text-align: left;
+input{
+    width: 80%;
+    color: var(--translucent-dark);
+    border: 0;
+    background-color: var(--transparent);
+}
+
+.entry-date{
+    width: 50%;
+
+    color: var(--off-black);
+    font-family: 'Quicksand';
+}
+.entry-date::placeholder{
+    font-family: 'Quicksand Light';
+    color: var(--translucent-dark);
+}
+
+.entry-note-input{
+    display: block;
+    height: 30%;
+    width: 100%;
+    padding-right: 2%;
+
+    resize: none;
+    overflow: hidden;
+
+    color: var(--off-black);
+    font-family: 'Quicksand';
+    font-size: 1rem;
+
+    border: 0;
+    background-color: var(--transparent);
+}
+
+.entry-entry-text{
+    position: absolute;
+    top: -50%;
+    right: -155%;
+
+    display: block;
+    height: 260%;
+    width: 120%;
+
+    resize: none;
+    overflow: hidden;
     white-space: pre-wrap;
     word-wrap: break-word;
 
-    color: var(--off-black)
-}
-
-.ql-editor::placeholder {
-    font-family: 'Quicksand Light';
-    color: var(--translucent-dark);
-    font-style: normal;
-}
-
-.ql-blank{
     color: var(--off-black);
+    font-family: 'Quicksand';
+    font-size: 1rem;
+    line-height: 1.0;
+    text-align: left;
+
+    border: 0;
+    background-color: var(--transparent);
 }
 
-.ql-container.ql-snow {
-    border: 1px solid black;
-}
-
-.ql-editor p, .ql-editor ol, .ql-editor ul, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6{
-    margin: 0;
-    padding: 0;
-    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+.entry-entry-text::placeholder{
+    font-family: 'Quicksand Bold';
 }
