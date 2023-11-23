@@ -2,6 +2,7 @@
 {/* CSS styling */} import './WebAppStyling.css'
 {/* Firebase */} import "./firebaseconfig";
 
+
 import Header from './components/Header.jsx'
 import MainPage from './pages/MainPage.jsx';
 import CreateDreamEntry from './pages/CreateDreamEntry.jsx';

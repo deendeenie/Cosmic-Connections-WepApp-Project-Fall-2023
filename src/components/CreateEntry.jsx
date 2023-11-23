@@ -3,50 +3,48 @@ import ButtonPrimary from '../components/ButtonPrimary.jsx'
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+import { uid } from 'uid';
+
 
 {/* ~✩ "Left page" content container ✩~ */}
 
-export default function CreateDream({ saveEntry, entry }) {
-
+export default function CreateDream({ saveDreamEntry, newDreamEntry }) {
     const [title, setTitle] = useState("");
-    const [nightstamp, setNight] = useState("");
-    const [dreamentry, setDreamEntry] = useState("");
-    const [confirmMessage, setConfirmMessage] = useState("");
+    const [entrytext, setEntryText] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        if (entry?.title) {
-            // if entry, set the states with values from the entry object.
-            // The entry object is a prop, passed from UpdatePage
-            setTitle(entry.title);
+        if (newDreamEntry?.title) {
+            setTitle(newDreamEntry.title);
+            setEntryText(newDreamEntry.entrytext);
         }
-    }, [entry]); // useEffect is called every time entry changes.
+    }, [newDreamEntry]);
 
-    async function handleSubmit(event){
+    async function handleSubmit(event) {
         event.preventDefault();
 
-        const newEntry = collection
-
-        const url = "https://webapp-project-2023-default-rtdb.firebaseio.com/journalentries.json/dream-entries.json";
-        const response = await fetch(url, {
-            method: "POST",
-            body: JSON.stringify(newEntry)
-        });
-
-        const formData = {
-            // create a new objebt to store the value from states / input fields
+        const newDreamEntryData = {
             title: title,
-            dreamentry: dreamentry,
-            nightstamp: nightstamp,
+            entrytext: entrytext,
+            type: "dream",
         };
 
-        const validForm = formData.title// will return false if one of the properties doesn't have a value
+        // Validate the form title
+        const validForm = newDreamEntryData.title;
 
         if (validForm) {
-            saveEntry(formData);
+            handleSubmit(newDreamEntryData);
         } else {
             setErrorMessage("You have to name your entry!");
         }
+
+        // Save entry
+        const url = "https://webapp-project-2023-default-rtdb.firebaseio.com/dream-entries.json";
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(newDreamEntryData)
+        });
 
         if (response.ok) {
             const data = await response.json();
@@ -64,19 +62,19 @@ export default function CreateDream({ saveEntry, entry }) {
                     Title:
                 </label>
                 <input
-                        type="text"
-                        value={title}
-                        placeholder="Name your entry"
-                        onChange={event => setTitle(event.target.newEntry)}
-                        className="entry-title-input"
-                    />
+                    type="text"
+                    value={title}
+                    placeholder="Name your entry"
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="entry-title-input"
+                />
             </div>
 
             <input
-                    type="text"
-                    value={dreamentry}
-                    placeholder="Start writing"
-                    onChange={event => setDreamEntry(event.target.newEntry)}
+                type="text"
+                value={entrytext}
+                placeholder="Start writing"
+                onChange={(e) => setEntryText(e.target.value)}
             />
 
             <p className="text-error">{errorMessage}</p>
