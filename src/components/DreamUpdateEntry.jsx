@@ -11,9 +11,9 @@ import DreamEntryForm from './DreamEntryForm.jsx';
 
 export default function UpdateDream() {
     // Define constants for entry data, error message and shorthand for navigation function
-    const navigate = useNavigate();
     const [dreamEntry, setDreamEntry] = useState();
     const params = useParams();
+    const navigate = useNavigate();
     const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/dream-entries/${params.entryId}.json`
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function UpdateDream() {
     async function saveDreamEntry(dreamEntryToUpdate) {
         dreamEntryToUpdate.uid = dreamEntry.uid;
         const response = await fetch(url, {
-            method: "PUT",
+            method: "GET",
             body: JSON.stringify(dreamEntryToUpdate)
         });
 
@@ -43,13 +43,13 @@ export default function UpdateDream() {
     }
 
     async function deleteEntry() {
-        const confirmDelete = window.confirm(`Do you want to delete post, ${dreamEntry.title}?`);
+        const confirmDelete = window.confirm(`Do you want to delete post, ${entry.title}?`);
         if (confirmDelete) {
             const response = await fetch(url, {
                 method: "DELETE"
             });
             if (response.ok) {
-                console.log("Dream entry deleted");
+                console.log("Entry deleted");
                 navigate("/");
             } else {
                 console.log("Sorry, something went wrong");
@@ -57,9 +57,9 @@ export default function UpdateDream() {
         }
     }
 
-    return (
-        <DreamEntryForm dreamEntry={dreamEntry} saveDreamEntry={saveDreamEntry}/>
-    );
+return (
+    <DreamEntryForm dreamEntry={dreamEntry} saveDreamEntry={saveDreamEntry}/>
+);
 }
 
-{/* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */}
+{/*° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ °*/}

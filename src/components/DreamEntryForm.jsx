@@ -99,8 +99,8 @@ return (
     />
 
     {/* Button commonent used to save the entry -> Sends the input contents to the Firebase database */}
-    <ButtonPrimary label="Save" type="submit" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
-    <ButtonPrimary type="delete" label="delete" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
+    <ButtonPrimary label="Save" type="submit" viewBox="0 0 17 17" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
+    <ButtonPrimary type="delete" label="delete" viewBox="0 0 17 17" path="M11.782 3.21796V9.44634M11.782 12.5605C11.782 13.4205 11.0849 14.1176 10.2249 14.1176H3.99651C3.13655 14.1176 2.43942 13.4205 2.43942 12.5605V8.66779M2.43942 3.21796V5.5536M9.44634 3.21796V2.43942C9.44634 1.57946 8.74923 0.882324 7.88924 0.882324H6.33215C5.47219 0.882324 4.77506 1.57946 4.77506 2.43942V3.21796M0.882324 3.21796H13.3391M5.5536 6.33215V11.0034M8.66779 6.33215V11.0034"/>
 
     {/* Error messaged displayed when the title and/or date are missing */}
     <p className="text-error">{errorMessage}</p>

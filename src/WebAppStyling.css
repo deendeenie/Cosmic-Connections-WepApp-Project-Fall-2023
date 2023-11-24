@@ -89,28 +89,6 @@ body {
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
 
-/* Centered Heading - Big */
-h2 {
-    font-family: "Frenchpress";
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.18rem;
-    text-align: center;
-}
-
-/* Centered Heading - Small */
-h3 {
-    font-family: "Frenchpress";
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12rem;
-    text-align: center;
-}
-
 /* Subheading */
 h4 {
     font-family: "QuickSand Bold";
@@ -223,6 +201,7 @@ p {
 
 /* ° ✧ ~ ✩ ° ✦ ~° ✷ °~ ✦ ° ✩ ~ ✧ ° */
 
+/* Entry preview styling */
 .entry-preview {
     height: 10%;
     margin: 2% 0;

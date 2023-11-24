@@ -12,7 +12,7 @@ export default function updateDreamPageLeft() {
     
             const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/dream-entries.json`;
             const response = await fetch(url, {
-                method: "POST",
+                method: "PUT",
                 body: JSON.stringify(dreamEntry)
             });
             if (response.ok) {

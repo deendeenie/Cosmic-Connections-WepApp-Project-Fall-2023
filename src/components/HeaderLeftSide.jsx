@@ -1,6 +1,7 @@
-import './HeaderLeftSide.css'
+{/* Import CSS file */}
+import './Header.css'
 
-function HeaderLeftSide() {
+export default function HeaderLeftSide() {
   return (
     <div className="header-logo-section">
       {/* Logo*/}
@@ -13,5 +14,3 @@ function HeaderLeftSide() {
     </div>
   )
 }
-
-export default HeaderLeftSide
