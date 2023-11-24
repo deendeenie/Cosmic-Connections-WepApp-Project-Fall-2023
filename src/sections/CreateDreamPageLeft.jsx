@@ -1,5 +1,5 @@
 {/* Import Page components */}
-import CreateDream from '../components/CreateEntry.jsx';
+import CreateDream from '../components/DreamCreateEntry.jsx';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 

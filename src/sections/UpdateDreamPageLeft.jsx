@@ -1,14 +1,15 @@
 {/* Import Page components */}
-import CreateDream from '../components/CreateEntry.jsx';
+import CreateDream from '../components/DreamCreateEntry.jsx';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
+import UpdateDream from '../components/DreamUpdateEntry.jsx';
 
 {/* ~✩ "Left page" content container ✩~ */}
 
-export default function CreateDreamPageLeft() {
+export default function updateDreamPageLeft() {
         const navigate = useNavigate();
     
-        async function createEntry() {
+        async function updateEntry() {
     
             const url = `${import.meta.env.VITE_FIREBASE_DB_URL}/dream-entries.json`;
             const response = await fetch(url, {
@@ -26,7 +27,7 @@ export default function CreateDreamPageLeft() {
     
         return (
             <section className="page-left">
-                <CreateDream saveEntry={createEntry} />
+                <UpdateDream saveEntry={updateEntry} />
             </section>
         );
     }

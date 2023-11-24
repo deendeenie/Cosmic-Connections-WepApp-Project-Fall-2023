@@ -8,7 +8,7 @@ class NotificationTrigger extends Component {
     this.showNotification = this.showNotification.bind(this);
   }
 
-// If the browser supports notifcationsn, ask for permission before sending them
+// If the browser supports notifcations, ask for permission before sending them
   componentDidMount() {
     if (!("Notification" in window)) {
       console.log("Browser does not support desktop notification");
@@ -17,7 +17,7 @@ class NotificationTrigger extends Component {
     }
   }
 
-// Contents of notifcation
+// Contents of notification
   showNotification() {
     var options = {
       body: 'Ursa misses you!',
@@ -40,3 +40,4 @@ class NotificationTrigger extends Component {
 }
 
 export default NotificationTrigger;
+

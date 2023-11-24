@@ -4,7 +4,7 @@ export default function DreamEntryPreview( {dreamEntry} ) {
     const navigate = useNavigate();
 
     function handleClick() {
-        navigate(`/dream-entries/${dreamEntry.id}`);
+        navigate(`/dreamentries/${dreamEntry.id}`);
     }
 
     return (
