@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 {/* ~✩ "Left page" content container ✩~ */}
 
 export default function CreateDream({ newDreamEntry }) {
+
     // Define constants for entry data, error message and shorthand for navigation function
     const [title, setTitle] = useState("");
     const [nightstamp, setNightstamp] = useState("");
@@ -121,7 +122,7 @@ export default function CreateDream({ newDreamEntry }) {
             />
 
             {/* Button commonent used to save the entry -> Sends the input contents to the Firebase database */}
-            <ButtonPrimary label="Save" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
+            <ButtonPrimary label="Save" type="submit" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
 
             {/* Error messaged displayed when the title and/or date are missing */}
             <p className="text-error">{errorMessage}</p>

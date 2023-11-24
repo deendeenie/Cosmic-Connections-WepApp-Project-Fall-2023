@@ -1,8 +1,7 @@
 {/* Import Page components */}
-import CreateDream from '../components/DreamCreateEntry.jsx';
+import UpdateDream from '../components/DreamUpdateEntry.jsx';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
-import UpdateDream from '../components/DreamUpdateEntry.jsx';
 
 {/* ~✩ "Left page" content container ✩~ */}
 

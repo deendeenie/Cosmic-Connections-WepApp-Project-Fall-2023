@@ -226,6 +226,7 @@ p {
 .entry-preview {
     height: 10%;
     margin: 2% 0;
+    cursor: pointer;
 }
 
 .entry-preview-info {

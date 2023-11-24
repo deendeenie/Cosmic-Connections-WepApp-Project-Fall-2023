@@ -95,3 +95,15 @@ input{
 .entry-entry-text::placeholder{
     font-family: 'Quicksand Bold';
 }
+
+.update-form{
+    position: absolute;
+    right: -107%;
+    height: 195%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.update-button svg{
+    height: 90%;
+}

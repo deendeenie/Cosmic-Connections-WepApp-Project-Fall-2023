@@ -1,3 +1,4 @@
+import '../components/CreateUpdateEntry.css'
 import ButtonPrimary from "./ButtonPrimary";
 import { useEffect, useState } from "react";
 
@@ -13,19 +14,12 @@ export default function DreamEntryForm( {dreamEntry} ) {
         if (dreamEntry?.title && dreamEntry?.nightstamp) {
             setTitle(dreamEntry.title);
             setNightstamp(dreamEntry.nightstamp);
-        }}, [newDreamEntry]);
+        }}, [dreamEntry]);
 
 
     async function handleSubmit(event) {
         // Ignore all default behavior associated with this function
         event.preventDefault();
-
-        // Save entry
-        const url = "https://webapp-project-2023-default-rtdb.firebaseio.com/dream-entries.json";
-        const response = await fetch(url, {
-            method: "POST",
-            body: JSON.stringify(newDreamEntryData)
-        });
 
         const DreamEntryData = {
             title: title,
@@ -61,6 +55,7 @@ return (
         <input
             type="text"
             value={title}
+            placeholder={title}
             onChange={(e) => setTitle(e.target.value)}
             className="entry-info-input"
         />
@@ -74,6 +69,7 @@ return (
         <input
             type="date"
             value={nightstamp}
+            placeholder={nightstamp}
             onChange={(e) => setNightstamp(e.target.value)}
             className="entry-date entry-info-input"
         />
@@ -87,6 +83,7 @@ return (
         <textarea
             type="text"
             value={entrynote}
+            placeholder={entrynote}
             onChange={(e) => setEntryNote(e.target.value)}
             className="entry-note-input"
         />
@@ -96,12 +93,14 @@ return (
     <textarea
         type="text"
         value={entrytext}
+        placeholder={entrytext}
         onChange={(e) => setEntryText(e.target.value)}
-        className="entry-entry-text"
+        className="entry-entry-text update-form"
     />
 
     {/* Button commonent used to save the entry -> Sends the input contents to the Firebase database */}
-    <ButtonPrimary label="Delete" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158" type="submit"/>
+    <ButtonPrimary label="Save" type="submit" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
+    <ButtonPrimary type="delete" label="delete" viewBox="0 0 17 15" path="M15.8823 0.882324L7.91362 11.1096M5.56989 14.1176L0.882324 8.10158"/>
 
     {/* Error messaged displayed when the title and/or date are missing */}
     <p className="text-error">{errorMessage}</p>
